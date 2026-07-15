@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom vibrant color palette mapping to standard Tailwind blue utility spectrum */
+  --color-blue-50: #f0f3ff;   /* Soft blue background tint for highlights, alerts, etc. */
+  --color-blue-100: #e0e7ff;  /* Soft border tint */
+  --color-blue-200: #c7d2fe;  /* Active state background tint */
+  --color-blue-300: #06b6d4;  /* Accent Color: #06B6D4 */
+  --color-blue-400: #06b6d4;  /* Accent Color: #06B6D4 (mapped to blue-400 for highlights) */
+  --color-blue-500: #8b5cf6;  /* Secondary Color: #8B5CF6 */
+  --color-blue-600: #5b6cff;  /* Primary Color: #5B6CFF */
+  --color-blue-700: #4954e6;  /* Hover Color: #4954E6 (Vibrant Blue Darker/Hover) */
+  --color-blue-800: #3c46cb;  /* Primary Active Color */
+  --color-blue-900: #1e1b4b;  /* Deep Indigo Accent Text */
+
+  /* Neutral palette mapping to user's exact background, card, text, and border specifications */
+  --color-slate-50: #f8faff;   /* Background: #F8FAFF */
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e5e7eb;  /* Borders: #E5E7EB */
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #6b7280;  /* Secondary Text: #6B7280 */
+  --color-slate-600: #4b5563;
+  --color-slate-700: #374151;
+  --color-slate-800: #1f2937;  /* Primary Text: #1F2937 */
+  --color-slate-900: #111827;  /* Deep/dark text */
+}
+
+/* Custom scrollbar utility (hidden in some panels, styled globally) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8faff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5b6cff;
+}
+
+/* Custom fade effects for smooth rendering */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* offset of fixed navbar */
+}
